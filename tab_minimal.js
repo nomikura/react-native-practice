@@ -23,7 +23,23 @@ class SettingsScreen extends React.Component {
     }
 }
 
-export default createBottomTabNavigator({
-    Home: { screen: HomeScreen },
-    Settings: { screen: SettingsScreen },
-});
+// Otherスクリーンを追加してみた。ちゃんと動いた
+class OtherScreen extends React.Component {
+    render() {
+        return (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text>Other dayo!!!</Text>
+            </View>
+        )
+    }
+}
+
+export default createBottomTabNavigator(
+// 第1引数は表示するコンポーネントをまとめて記述
+// ここに書くだけでタブに追加されるっぽい。便利すぎる
+    {
+        Home: { screen: HomeScreen },
+        Settings: { screen: SettingsScreen },
+        Other: { screen: OtherScreen },
+    }
+);

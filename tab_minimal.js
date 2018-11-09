@@ -1,3 +1,4 @@
+// タブを使用した最小限のサンプルプログラム
 import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation';

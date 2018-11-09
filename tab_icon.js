@@ -25,10 +25,12 @@ class SettingsScreen extends React.Component {
 }
 
 export default createBottomTabNavigator(
+    // 第1引数はタブで表示するコンポーネントを記述
     {
         Home: HomeScreen,
         Settings: SettingsScreen,
     },
+    // 第2引数はタブに関する設定を書く
     {
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({ focused, horizontal, tintColor }) => {
